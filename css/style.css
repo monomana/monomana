@@ -1,0 +1,500 @@
+ * {
+	/* width: 100%; */
+	/* height: 100%; */
+	margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+    /* background-color: rgba(133, 108, 62, 0.2); */
+font-family: 'Courier New', Courier, monospace;
+
+    outline: none;
+    scroll-behavior: smooth;
+   
+}
+:root {
+  --main-color:  peru;
+  --text-color: #310a0d;
+  --text-color-secundary: #5D3E2A;
+  --text-color-third: #FBDFB0;
+  --bg-color: #F6EFDA;
+  --bg-color-secundary: #E0CCAB;
+}
+html {
+
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+body {
+  color: var(--text-color-secundary);
+
+
+}
+section {
+  background-image: url("../assets/img/bg-1.png");
+  /* border: solid 1px var(--text-color); */
+  height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.col-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.row-wrap{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.row-center {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.row-between {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
+}
+.home {
+  display: flex;
+  align-items: center;
+  padding: 0 9%;
+  /* background: url("about.png")  no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+.home-img {
+  position: absolute;
+  right: 10vw;
+  border: solid 3px var(--bg-color-secundary);
+  transform: rotate(.01turn);
+  /* margin: 5rem; */
+}
+.home-img img {
+  width: 100%;
+  display: block;
+  border: solid 20px whitesmoke;
+}
+.home-img-old {
+  /* height: 5rem;
+  width: 5rem; */
+  position: absolute;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+  right: 15vw;
+  /* border: solid 3px var(--bg-color-secundary); */
+  transform: rotate(.01turn);
+  /* margin: 5rem; */
+  /* z-index: -1; */
+}
+.home-img-old img {
+  height: 40rem;
+  /* width: 15rem; */
+  /* width: 100%; */
+  display: block;
+  filter: sepia(30%);
+  /* border: solid 20px whitesmoke; */
+}
+.sello{
+  height: 15rem;
+  position: absolute;
+  right: 28vw;
+  top: 38rem;
+  transform:  rotate(-.05turn);
+  filter: sepia(50%);
+  /* width: 15rem; */
+  /* width: 100%; */
+  display: block;
+  /* border: solid 20px whitesmoke; */
+}
+/* .home-img-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  
+  background: var(--bg-color);
+  transition: 2s;
+  opacity: 0.5;
+}
+.home-img-hover:hover {
+  background: transparent;
+} */
+.home-content {
+  max-width: 60rem;
+}
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.home-content h1 span{
+  color: var(--main-color);
+}
+.home-content .text-animate {
+  font-size: 3.2rem;
+  font-weight: 800;
+  /* color: transparent; */
+  color: var(--bg-color-secundary);
+  -webkit-text-stroke: .7px var(--main-color);
+}
+.home-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 4rem;
+}
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 34.5rem;
+  height: 5rem;
+}
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background-color: var(--main-color);
+  border: .2rem solid var(--main-color);
+  border-radius: .8rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+.btn-box .btn:hover {
+  color: var(--main-color);
+}
+.btn-box .btn:nth-child(2) {
+  background: transparent;
+  color: var(--main-color);
+}
+.btn-box .btn:nth-child(2):hover {
+  color: var(--bg-color);
+}
+.btn-box .btn:nth-child(2)::before {
+  background: var(--main-color);
+}
+.btn-box .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: -1;
+  transition: .5s;
+}
+.btn-box .btn:hover::before {
+  width: 100%;
+}
+.home-social {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 4rem;
+  width: 170px;
+}
+/* .home-social-pic {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin-left: 7rem;
+  bottom: 2rem;
+  width: 170px;
+} */
+.home-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: solid .2rem var(--main-color);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+.home-social a:hover {
+  color: var(--bg-color);
+}
+.home-social a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  transition: .5s;
+}
+.home-social a:hover::before {
+  width: 100%;
+}
+.header {
+  /* background-color: #553a29; */
+  /* border-bottom: solid 1px red; */
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  left: 0;
+  padding: 2rem 9%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.navbar a {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-left: 3.5rem;
+  transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+.head-line {
+  width: 80vw;
+  border: solid 2px var(--bg-color-secundary);
+  margin: 2rem 0;
+}
+
+.head {
+  font-size: 5rem;
+  text-align: center;
+}
+.head span{
+color: var(--main-color);
+/* filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); */
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  /* background: var(--bg-color-secundary);
+  background-image: url('bg-2.png'); */
+  padding-bottom: 6rem;
+}
+.about-img {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-img img {
+  width: 90%;
+  border-radius: 50%;
+  border: solid .2rem var(--main-color);
+}
+.about-img .circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: .2rem solid var(--bg-color-secundary);
+  border-bottom: .2rem solid var(--bg-color-secundary);
+  border-left: .2rem solid var(--main-color);
+  border-right: .2rem solid var(--main-color);
+}
+.about-content {
+  text-align: center;
+}
+.about-content h3 {
+  font-size: 2.5rem;
+}
+.about-content p {
+  font-size: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+.btn-box.btns {
+  display: inline-block;
+  width: 15rem;
+}
+.btn-box.btns a::before {
+  background: var(--bg-color);
+}
+
+.education {
+  /* display: flex;
+  align-items: center; */
+  /* padding: 0 9%; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  /* background: var(--bg-color-secundary);
+  background-image: url('bg-2.png'); */
+  padding-bottom: 6rem;
+}
+.education-content {
+  text-align: start;
+  max-width: 60rem;
+}
+.education-content h3 {
+  font-size: 2.5rem;
+}
+.education-content p {
+  font-size: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+@media (max-width: 600px) {
+  .education .education-bg-img {
+    width: 30rem;
+  }
+}
+.education-bg-img {
+  /* background: url('mapa-education.png') no-repeat; */
+  /* position: absolute;
+  right: 10vw; */
+  /* height: 100vh; */
+  width: 50rem;
+}
+/* .education-content {
+  max-width: 60rem;
+}
+.education-content h3 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.education-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 4rem;
+} */
+
+
+.footer {
+  height: 30rem;
+  width: 100%;
+  background-image: url("../assets/img/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* div { margin:10px; width:200px; height:200px; background-color: #67686b; } .pattern1{ background-image: repeating-linear-gradient(36deg, rgba(255,255,255, 0.1), rgba(255,255,255, 0.1) 1px, transparent 0px, transparent 2px); } .pattern2 { background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.1), rgba(255,255,255, 0.1) 1px, transparent 1px, transparent 6px); background-size: 4px 4px; } */
+
+/* Fuente: https://www.iteramos.com/pregunta/75836/css-creacion-de-fondos-con-textura */
+/* ================================== */
+/* #btn {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    font-family: "Segoe UI";
+    font-size: 20px;
+    padding: 8px 20px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black
+  }
+  
+  #progress-bar-container {
+    width: 800px;
+    height: 10px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 35px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-child {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .progress {
+    color: white;
+    text-align: center;
+    line-height: 75px;
+    font-size: 35px;
+    font-family: "Segoe UI";
+    animation-direction: reverse;
+    background: #e5405e;
+  
+    // Chrome10-25,Safari5.1-6 
+    background: linear-gradient(to right, #e5405e 0%, #ffdb3a 45%, #3fffa2 100%);
+  }
+  
+  .shrinker {
+    background-color: rgb(184, 179, 179);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  
+  .timelapse {
+    animation-name: timelapse;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.86, .05, .4, .96);
+  }
+  
+  @keyframes timelapse {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 15%;
+    }
+  } */

@@ -1,0 +1,121 @@
+:root {
+    --skill-bar-length:0%;
+  }
+.card-skill {
+    /* // height: 500px; */
+    
+    padding: 1.5rem;
+    color: var(--text-color);
+    border-radius: 0.4rem;
+    border: solid 2px var(--bg-color-secundary);
+    /* background: url("../assets/img/bg-3.png"); */
+    /* background-color: var(--bg-color-secundary); */
+    width: 350px;
+}
+
+.skill-title {
+    /* // width: 20%;
+    // display: block; */
+    font-size: large;
+    justify-content: end;
+    margin: 0 0.5rem;
+    /* // padding: 0; */
+}
+.skill-item h5{
+   font-size: 1.5em;
+}
+
+.skill-years-title {
+    margin: 0 0.5rem;
+    font-size: 1.3rem;
+    /* // height: .5em;
+    // word-break: break-all;
+    // -ms-word-break: break-all;
+    // word-break: break-word; */
+}
+
+.skill-years {
+    width: 185px;
+    margin: 0;
+}
+
+.skill-item {
+    margin: 0 1rem;
+    height: 1.5rem;
+}
+
+.skill-bar,
+.skill-bar::after {
+    background-color: grey;
+    border-radius: 0.2rem;
+    height: 8px;
+    overflow: hidden;
+    position: relative;
+    width: 175px;
+}
+
+/* .skill-bar::before {
+      content:"";
+      position: absolute;
+      background:#D8D8D8;
+      background: linear-gradient(to bottom, green, #585858) ;
+  } */
+.skill-bar::after {
+    content: "";
+    background-color: var(--text-color-secundary);
+    /* background-color: linear-gradient(-90deg, violet, mix(violet, deepskyblue, 20%), mix(limegreen, yellow, 70%), yellow, orange, mix(red, deeppink, 20%)); */
+    border-radius: 0.2em;
+     /* clip-path: inset(0 30% 0 0); */
+    left: -175px;
+     /* height: 10px; */
+    position: absolute;
+    width: 175px;
+    animation: skill-bar-fill 1s ease-in-out forwards;
+}
+
+@keyframes skill-bar-fill {
+    to {
+        transform: translateX(var(--skill-bar-length));
+    }
+}
+
+.skill-bar--10::after {
+    --skill-bar-length: 10%;
+}
+
+.skill-bar--20::after {
+   --skill-bar-length: 20%;
+}
+
+.skill-bar--30::after {
+  --skill-bar-length: 30%;
+}
+
+.skill-bar--40::after {
+  transform: translateX(70%);
+    --skill-bar-length: 40%;
+}
+
+.skill-bar--50::after {
+    --skill-bar-length: 50%;
+}
+
+.skill-bar--60::after {
+   --skill-bar-length: 60%;
+}
+
+.skill-bar--70::after {
+    --skill-bar-length: 70%;
+}
+
+.skill-bar--80::after {
+   --skill-bar-length: 80%;
+}
+
+.skill-bar--90::after {
+   --skill-bar-length: 90%;
+}
+
+.skill-bar--100::after {
+   --skill-bar-length: 100%;
+}
