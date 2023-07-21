@@ -1,0 +1,52 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "skills": "Habilidades",
+    "education": "Educación",
+    "projects": "Proyectos",
+    "about": "Acerca"
+  },
+  "home": {
+    "hi":"Hola, soy <span >Mauricio Agüero</span>",
+    "title-dev": "Desarrollador Full Stack",
+    "detail": "Si hay algo de lo que no tenga conocimiento, investigo hasta lograr aprender y resolverlo. <br>Trato de estar actualizado aprendiendo tecnologías nuevas.<br >Aunque nunca es suficiente el conocimiento adquirido",
+    "detail-br1":"Trato de estar siempre actualizado aprendiendo tecnologías nuevas.",
+    "detail-br2":"Aunque nunca es suficiente el conocimiento adquirido",
+    "hire-me": "Contrátame",
+    "talk": "Hablemos"
+  },
+  "skills": {
+    "title":"Mis <span>Habilidades</span>",
+    "hard": "Habilidades Técnicas",
+    "years":"Experiencia en años",
+    "others": "Otros",
+    "soft": "Habilidades Blandas",
+    "list": "<li>Escucha activa</li><li>Paciencia</li><li>Mente abierta</li><li>Adaptabilidad</li><li>Resolución de problemas</li><li>Pensamiento crítico</li><li>Creatividad</li><li>Responsabilidad</li><li>Confianza</li><li>Gestión del tiempo y de proyectos</li>"
+  },
+  "education": {
+    "title-sec": "Mi <span>Viaje</span>",
+    "title-edu": "Educación",
+    "subtitle": "Mi tesoro: el conocimiento",
+    "title-formal": "Formal",
+    "title-cap": "Capacitación"
+  },
+  "projects": {
+    "title-sec": "Mis <span>Proyectos</span>"
+  },
+  "about": {
+    "title-sec": "Acerca de <span>Mi</span>",
+    "about-content": "Desarrollador Frontend y Backend",
+    "detail": "Tengo la suerte de que mis padres me inculcaran el valor de la <b>responsabilidad, dedicación, principios y valores morales</b> que hoy en día son tan difíciles de encontrar. <br>Constantemente siento la <b>necesidad de estar aprendiendo</b>, a lo que le llamo <b> <q>sed de conocimiento</q></b>. Pienso que casi nada es imposible, solo es cuestión de tiempo y esfuerzo para encontrar soluciones a los problemas que se nos presentan.<br>Gracias a los estudios universitarios aprendí algunas cuestiones que no tenía en cuenta sobre como debo comportarme <b>éticamente</b> en mi profesión.",
+    "read-more":"Leer Más"
+   },
+   "language":{
+    "title":"Idiomas",
+    "spanish": "<p><strong>Español</strong></p><p>Nativo</p>",
+    "english": "<p><strong>Inglés</strong></p>",
+    "read": " Cómo lo leo",
+    "write": "Cómo lo escribo",
+    "speak": "Cómo lo hablo",
+    "understand": "Cómo lo entiendo"
+   }
+
+}

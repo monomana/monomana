@@ -1,0 +1,51 @@
+{
+  "menu": {
+    "home": "Home",
+    "skills": "Skills",
+    "education": "Education",
+    "projects": "Projects",
+    "about": "About"
+  },
+  "home": {
+    "hi":"Hi, I am <span> Mauricio Agüero",
+    "hi-span":"Mauricio Agüero",
+    "title-dev": "Developer Full Stack",
+    "detail": "If there are something what I dont know, investigate to get learn and resolve <br>I always try to be up to date with the new technologies. <br>I try to always be updated by learning new technologies.<br >Although the knowledge acquired is never enough",
+    "hire-me": "Hire me",
+    "talk": "Let's talk"
+  },
+  "skills": {
+    "title":"My <span>Skills</span>",
+    "hard": "Technical Skills",
+    "years":"Experience in years",
+    "others": "Others",
+    "soft": "Soft Skills",
+    "list": "<li>Active listening</li><li>Patience</li><li>Open-mindedness</li><li>Adaptability</li><li>Problem-solving</li><li>Critical thinking</li><li>Creativity</li><li>Accountability</li><li>Confidence</li><li>Time and project management</li>"
+  },
+  "education": {
+    "title-sec": "My <span>Journey</span>",
+    "title-edu": "Education",
+    "subtitle": "My treasure: the knowledge",
+    "title-formal": "Formal",
+    "title-cap": "Training"
+  },
+  "projects": {
+    "title-sec": "My <span>Projects</span>"
+  },
+  "about": {
+    "title-sec": "About <span>Me</span>",
+    "about-content": "Developer Frontend y Backend",
+    "detail": "I am lucky that my parents instilled in me the value of <b>responsibility, dedication, principles and moral values</b> that are so difficult to find today. <br>I constantly feel the <b>need to be learning</b>, which I call <b> <i>thirst for knowledge</i></b>. I think that almost nothing is impossible, it's just It is a matter of time and effort to find solutions to the problems that arise.<br>Thanks to my university studies, I learned some issues that I did not take into account about how I should behave <b>ethically</b> in my profession.",
+    "read-more":"Read More"
+   },
+   "language":{
+    "title":"Languages",
+    "spanish": "<p><strong>Spanish</strong></p><p>Native</p>",
+    "english": "<p><strong>English</strong></p>",
+    "read": "How do i read it",
+    "write": "How I write it",
+    "speak": "how do i speak it",
+    "understand": "How do i understand it"
+   }
+   
+}

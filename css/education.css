@@ -1,0 +1,186 @@
+
+/* Education section */
+
+.education {
+    /* display: flex;
+    align-items: center; */
+    /* padding: 0 9%; */
+  /* background: url("../assets/img/mapa-education.png") no-repeat; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+    gap: 1rem;
+    /* background: var(--bg-color-secundary);
+    background-image: url('bg-2.png'); */
+    padding-bottom: 6rem;
+    /* width: min-content; */
+  }
+  .education-content {
+    /* display: flex;
+    flex-direction: column; */
+    gap: 3rem;
+    text-align: start;
+    /* max-width: 60rem; */
+    /* border: solid 1rem red; */
+    z-index: 1;
+  }
+  .edu {
+    justify-content: unset;
+    /* align-items: unset; */
+    flex-grow: 1;
+    /* border: solid 1px red; */
+    padding: 0 2rem;
+  }
+  /* .edu-sub-container > * { 
+    flex: 1;
+  } */
+  .education-content h3 {
+    font-size: 3.5rem;
+  }
+  .education-content p {
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem;
+  }
+  
+  .education-sub {
+    font-size: 2rem;
+    text-align: start;
+  }
+
+  @media (max-width: 600px) {
+    .education .education-bg-img {
+      width: 30rem;
+    }
+  }
+  .education-bg-img {
+    padding-top: 5rem;
+    /* background: url('mapa-education.png') no-repeat; */
+    position: absolute;
+    opacity: .2;
+    /* right: 10vw;  */
+    /* height: 100vh; */
+    width: 50rem;
+  }
+.education-box {
+    border-left: dashed 0.3em var(--bg-color-secundary);
+    padding: 0 1em;
+}
+
+
+.education-box::before {
+    content: "";
+    /* border: dashed .3em var(--bg-color-secundary); */
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    border: solid 1px var(--text-color-secundary);
+    background-color: var(--main-color);
+    position: relative;
+    left: -1.9rem;
+}
+
+.education-box::after {
+    content: "Present day";
+    color: var(--main-color);
+    /* border: dashed .3em var(--bg-color-secundary); */
+    position: absolute;
+    padding-left: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.education-box article::before {
+    content: "";
+    /* border: dashed .3em var(--bg-color-secundary); */
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: var(--text-color-secundary);
+    position: relative;
+    left: -1.9rem;
+    top: 3rem;
+}
+
+.header-article{
+  font-size: 1.5rem;
+  /* flex-shrink: 1; */
+  /* flex: 1 0 100%; */
+}
+
+.msg-bubble-p{
+    display: none;
+}
+.msg-bubble{
+    display: none;
+}
+.education-artcile:hover .msg-bubble::before {
+    content: "";
+
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    /* border-image: url("../assets/img/bg-2.png");; */
+    /* border-right-color: url("../assets/img/bg-2.png"); */
+    border-right: 10px solid var(--bg-color-third);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    filter: var(--filter-drop-shadow);
+    left: -1.2rem;
+    top: 3rem;
+    /* z-index: 3; */
+    
+    /* padding: 1.5rem; */
+}
+
+/* .msg-bubble:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    left: -17px;
+  } */
+.education-artcile:hover .msg-bubble {
+    padding: 0.8rem;
+    /* margin-left: 5rem; */
+    position: absolute;
+    display: inline;
+    border-radius: 0.5rem;
+    background: url("../assets/img/bg-2.png");
+    /* background-color: var(--bg-color-secundary); */
+    max-width: 35rem;
+    margin:0 2rem;
+    filter: var(--filter-drop-shadow);
+    z-index: 1;
+    /* left: 2rem; */
+    /* width: clamp(5rem,1rem+10vw,15rem); */
+}
+html.dark .education-artcile:hover .msg-bubble {
+  background: url("../assets/img/bg-4.png");
+}
+.education-artcile:hover::before {
+    content: "";
+    /* border: dashed .3em var(--bg-color-secundary); */
+    border-radius: 50%;
+    /* cursor: pointer; */
+    height: 25px;
+    width: 25px;
+    background-color: var(--text-color-secundary);
+    /* border-color: solid 3rem red; */
+    position: relative;
+    left: -2.2rem;
+    top: 3rem;
+}
+
+.education-artcile:hover header {
+    content: "";
+    visibility: hidden;
+}
+
+.header-artcile {
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,114 @@
+html.dark .project-figure {
+  mix-blend-mode: unset;
+  filter: sepia(60%);
+}
+html.dark .project-figure::before {
+  content: '';
+  background: url("../assets/img/bg-2.png");
+  /* background-color: rebeccapurple; */
+  /* background-clip: padding-box; */
+  z-index: 1;
+/* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  height: 87%;
+  width: 100%;
+  opacity: .6;
+}
+html.dark .project-figure:hover::before {
+  opacity: .4;
+}
+html.dark .project-figure:hover {
+  filter: sepia(0%);
+  transition: .5s;
+}
+
+.project-figure {
+  /* background: url("../assets/img/bg-3.png");
+  background-color: chocolate; */
+  /* position: relative; */
+    display: block;
+  filter: sepia(90%);
+    transition: .5s;
+      height: auto;
+    max-width: 40rem;
+    min-width: 25rem;
+    width: 20rem;  
+    mix-blend-mode: multiply;
+}
+.project-figure:hover {
+    filter: sepia(0%);
+    /* width: 26rem; */
+    height: auto;
+    transform: scale(1.03);
+    /* mix-blend-mode: normal; */
+    transition: .5s;
+  }
+.project-figure img{
+    display: block;
+    filter: var(--filter-drop-shadow);
+  width: 100%;
+  }
+.project-figure figcaption{
+    position: relative;
+   bottom: 4rem;
+   left: 4rem;
+}
+/* .project-pic {
+    position:absolute;
+    display: block;
+    width: 25rem;
+    height: auto;
+    top: 2rem;
+} */
+
+
+
+.project-link {
+    display: flex;
+    align-items: center;
+     justify-content: space-around; 
+    position: relative; 
+
+     /* bottom: 4rem; */
+    width: 170px;
+  }
+
+  .project-link a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    border: solid .2rem var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+  }
+  .project-link a:hover {
+    color: var(--bg-color);
+  }
+  .project-link a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+  }
+  .project-link a:hover::before {
+    width: 100%;
+  }
