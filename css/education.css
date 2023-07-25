@@ -14,6 +14,7 @@
     /* background: var(--bg-color-secundary);
     background-image: url('bg-2.png'); */
     padding-bottom: 6rem;
+    height: fit-content;
     /* width: min-content; */
   }
   .education-content {
@@ -30,11 +31,18 @@
     /* align-items: unset; */
     flex-grow: 1;
     /* border: solid 1px red; */
+    
+    /* width: 400px; */
     padding: 0 2rem;
   }
-  /* .edu-sub-container > * { 
-    flex: 1;
-  } */
+  .edu-sub-container {
+    gap:5rem;
+  }
+  .edu-sub-container > * { 
+    /* justify-content: baseline; */
+    
+    align-self: start;
+  }
   .education-content h3 {
     font-size: 3.5rem;
   }
@@ -63,8 +71,9 @@
     width: 50rem;
   }
 .education-box {
-    border-left: dashed 0.3em var(--bg-color-secundary);
+    border-left: solid 0.3em var(--bg-color-secundary);
     padding: 0 1em;
+   
 }
 
 
@@ -103,8 +112,13 @@
 
 .header-article{
   font-size: 1.5rem;
+  /* border-top: solid 2px var(--bg-color-secundary); */
+  /* overflow-wrap: break-word; */
   /* flex-shrink: 1; */
   /* flex: 1 0 100%; */
+}
+html.dark .education-box article::before{
+  background-color: var(--text-color);
 }
 
 .msg-bubble-p{

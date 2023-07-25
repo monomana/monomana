@@ -9,10 +9,16 @@
         flex-direction: row;
         gap: 1rem; */
         flex-wrap: wrap;  
+        /* grid-template-columns: auto; */
     }
 }
-.skill.div {
-    
+.skills {
+    height: fit-content;
+}
+.skill-content {
+    /* display: grid;
+    grid-template-columns: 750px 1fr;
+    gap: .5rem; */
 }
 .skill-div > h3{
     font-size: x-large;

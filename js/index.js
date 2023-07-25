@@ -55,14 +55,22 @@ btnDark.addEventListener("click", () => enableDark());
 
 const btnMenu = document.querySelector("#btn-menu");
 const navBar = document.querySelector(".navbar");
-const navBarFooter = document.querySelector(".navbar-footer");
+const headerNav = document.querySelector(".header");
 const openMenu = () => {
+
+ 
     if (btnMenu.classList.contains("bx-menu")) {
         navBar.style.display = "flex";
+        headerNav.classList.add('box-shadow');
         // navBar.style.visibility='visible';
         btnMenu.classList.replace("bx-menu", "bx-x");
     } else {
         // navBar.style.visibility='hidden';
+        const sec = document.querySelector('#home');
+        if(isInViewport(sec) ){
+            headerNav.classList.remove('box-shadow');
+        }
+    
         navBar.style.display = "none";
         btnMenu.classList.replace("bx-x", "bx-menu");
     }
@@ -70,11 +78,11 @@ const openMenu = () => {
 };
 btnMenu.addEventListener("click", () => openMenu());
 window.addEventListener("resize", function () {
-    if (window.innerWidth > 900) {
+    if (window.innerWidth > 1024) {
         navBar.style.display = "flex";
     } else {
         navBar.style.display = "none";
-        btnMenu.classList.replace("bx-x", "bx-menu");
+        btnMenu.classList.replace("bx-x", "bx-menu");     
     }
 });
 
@@ -109,23 +117,40 @@ const changeLanguage = async (language) => {
         // console.log(jsonTexts[section][value]);
     }
 };
+function changeFlag(flagitem){
+    if (!flagitem.classList.contains("active")) {
+        flagElement.forEach((element) => {
+            element.classList.toggle("active");
+        });
+        localStorage.setItem("lang", flagitem.dataset.language);
+        changeLanguage(flagitem.dataset.language);
+    }
+}
+
+
+/*
+Resource
+ autor: https://es.stackoverflow.com/users/97355/fran-islas
+ link: https://es.stackoverflow.com/a/216837
+ */
 
 let lang = localStorage.getItem("lang");
+const locale = navigator.language;
+// console.log(`lang ${lang}`);
+// console.log(`lang ${navigator.language}`);
 if (!lang) {
-    lang = "es";
+    lang = "en";
+    if (locale.includes('es-')) {
+        lang= "es";
+    }
 }
+
 changeLanguage(lang);
+const flag = document.querySelector(`[data-language="${lang}"]`)
+changeFlag(flag);
 
 flagElement.forEach((flagitem) => {
-    flagitem.addEventListener("click", () => {
-        if (!flagitem.classList.contains("active")) {
-            flagElement.forEach((element) => {
-                element.classList.toggle("active");
-            });
-            localStorage.setItem("lang", flagitem.dataset.language);
-            changeLanguage(flagitem.dataset.language);
-        }
-    });
+    flagitem.addEventListener("click",() => changeFlag(flagitem))
 });
 
 function isInViewport(el) {
@@ -139,21 +164,64 @@ function isInViewport(el) {
     return vertInView && horInView;
 }
 
+/*
+Resource
+ autor: https://stackoverflow.com/users/12079462/garbus-uchiha
+ link: https://stackoverflow.com/a/59582473
+ */
+// let scroolSection ; 
+
 window.onscroll = () => {
     // finding element in the viewport
     for (el of document.querySelectorAll("section")) {
+       
         // console.log(el);
         if (isInViewport(el)) {
             // setting active element
+            // scroolSection = el;
+            const header = document.querySelector('.header');
+            
+            if (el.id !== 'home' ) {
+                header.classList.add('box-shadow');
+                // header.style.background= 'var(--bg-image)';
+                console.log(el.id);
+            }else {
+                // console.log(el.id);
+                header.classList.remove('box-shadow');
+                // header.style.background= 'none';
+            }
+
+
             const selectedMenu = document.querySelector(`[data-value="${el.id}"]`);
+        
             if (!selectedMenu.classList.contains("active")) {
                 for (el of document.querySelectorAll('[data-section="menu"]')) {
                     el.classList.remove("active"); // reset list
                 }
-                console.log(selectedMenu);
+                
                 selectedMenu.classList.toggle("active");
             } else {
             }
         }
     }
 };
+
+
+/* Carousel */
+document.querySelectorAll('.btn-carousel').forEach((btn) => {
+    btn.addEventListener('click',()=>{
+        const carouselImage = document.querySelector('#carousel-img');
+        if (btn.id === 'first-img') {
+            carouselImage.setAttribute('src','assets/img/bg-home-1.jpeg');
+        } else {
+            carouselImage.setAttribute('src','assets/img/bg-home-2.jpeg');
+        }
+    })
+});
+
+// window.addEventListener("scrollend", (event) => {
+//   // scroll ended
+//   const header = document.querySelector('.header');
+//       header.classList.remove('box-shadow');
+// });
+

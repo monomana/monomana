@@ -1,101 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio creado en Javascript, HTML, CSS">
-    <title>Portfolio - Mauri</title>
-    
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/education.css" />
-    <link rel="stylesheet" href="css/projects.css" />
-    <link rel="shortcut icon" href="assets/icons/star-regular-24.png" type="image/x-icon" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header class="header">
-      <i class="bx bx-menu bx-lg btn-nav" id="btn-menu"></i>
-      <div>
-        <p  class="logo">
-          mauri.at
-        </p>
-        <div class="version row-start">
-          <span>version 1.0</span><span>static</span>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio creado en Javascript, HTML, CSS">
+
+  <meta name="author" content="Mauricio Agüero" />
+  <meta name="copyright" content="Mauricio Agüero" />
+  <meta name="robots" content="noindex,nofollow"/>
+  <meta name="keywords" content="portfolio, Javascript, HTML, CSS"/>
+
+  <meta http-equiv="expires" content="43200"/>
+  <!-- <meta http-equiv="cache-control" content="no-cache"/> -->
+
+  <title>Portfolio | Mauricio Agüero</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/education.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- <link rel="shortcut icon" href="assets/icons/star-regular-24.png" type="image/x-icon" /> -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header wsui-shadow-on-scroll">
+    <i class="bx bx-menu bx-lg btn-nav" id="btn-menu"></i>
+    <div class="logo-conainer">
+      <p class="logo">
+        maüri.at
+      </p>
+      <div class="version row-start">
+        <span>version 1.0</span><span>static</span>
       </div>
-      
-      <nav class="navbar">
-        <a href="#home" class="active" data-section="menu" data-value="home">Home</a>
-        <a href="#skills" data-section="menu" data-value="skills">Skills</a>
-        <a href="#education" data-section="menu" data-value="education">Education</a>
-        <a href="#projects" data-section="menu" data-value="projects">Projects</a>
-        <a href="#about" data-section="menu" data-value="about">About</a>
-      </nav>
-      <div class="flag-buttons" id="flags">
+    </div>
+
+    <nav class="navbar">
+      <a href="#home" class="active" data-section="menu" data-value="home">Home</a>
+      <a href="#skills" data-section="menu" data-value="skills">Skills</a>
+      <a href="#education" data-section="menu" data-value="education">Education</a>
+      <a href="#projects" data-section="menu" data-value="projects">Projects</a>
+      <a href="#about" data-section="menu" data-value="about">About</a>
+    </nav>
+
+    <div class="row-center container-buttons">
+      <div class="flag-buttons row-evenly" id="flags">
         <img class='btn-nav flag-item active' src="assets/icons/es.svg" data-language="es"></img>
         <img class='btn-nav flag-item' src="assets/icons/gb.svg" data-language="en"></img>
-       </div>
-      <div class="theme-buttons">
-       <i class='bx bxs-sun bx-md btn-nav tm-btn-active' id="btn-theme-light"></i>
+      </div>
+      <div class="theme-buttons row-center">
+        <i class='bx bxs-sun bx-md btn-nav tm-btn-active' id="btn-theme-light"></i>
         <i class='bx bx-moon bx-md btn-nav' id="btn-theme-dark" onclick="enableDark()"></i>
       </div>
-    </header>
+    </div>
+  </header>
+  <main class="main">
+
     <section class="home" id="home">
       <!-- <div class="home-bg-picture"> -->
+        <h1 data-section="home" data-value="hi">Hola, soy <span>Mauricio Agüero</span></h1>
       <div class="home-content">
-        <h1 data-section="home" data-value="hi">Hola, soy <span >Mauricio Agüero</span></h1>
         <div class="text-animate">
           <h3 data-section="home" data-value="title-dev">Desarrollador Full Stack</h3>
         </div>
         <p data-section="home" data-value="detail">
-          Si hay algo de lo que no tenga conocimiento, 
-          investigo hasta lograr aprender y resolverlo. 
+          Si hay algo de lo que no tenga conocimiento,
+          investigo hasta lograr aprender y resolverlo.
           <br data-section="home" data-value="detail-br1">
           Trato de estar actualizado aprendiendo tecnologías nuevas.
-          <br >
+          <br>
           Aunque nunca es suficiente el conocimiento adquirido
         </p>
-        
-        <div class="btn-box">
-          <a href="#" class="btn" data-section="home" data-value="hire-me">Hire me</a>
-          <a href="#" class="btn" data-section="home" data-value="talk">Let's talk</a>
+      </div>
+      <div class="home-image">
+        <img src="assets/img/bg-home-1.jpeg" id="carousel-img" />
+        <div class="btns-carousel">
+          <button class="btn-carousel" id="first-img"></button>
+          <button class="btn-carousel" id="second-img"></button>
         </div>
       </div>
-      <!-- <figure class="home-img">
-                <img src="about.png"  >            
-            </figure> -->
-      <!-- <figure class="home-img-old">
-        <img src="assets/img/my-pic.jpg"  />
-      </figure>
-      <img src="assets/img/sello.png"  class="sello" /> -->
+      <div class="btn-box">
+        <a href="#" class="btn" data-section="home" data-value="hire-me">Hire me</a>
+        <a href="#" class="btn" data-section="home" data-value="talk">Let's talk</a>
+      </div>
       <div class="home-social">
-        <a href="#"><i class="bx bxl-github"></i></a>
-        <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="https://github.com/monomana" target="_blank"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/mauricio-agüero/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
         <a href="#"><i class="bx bxl-facebook-circle"></i></a>
       </div>
-      <div class="home-pic"></div>
-      <div class="home-img-hover"></div>
+      <!-- <figure class="home-img">
+                  <img src="about.png"  >            
+              </figure> -->
+      <!-- <figure class="home-img-old">
+          <img src="assets/img/my-pic.jpg"  />
+        </figure>
+        <img src="assets/img/sello.png"  class="sello" /> -->
+    
+      <!-- <div class="home-pic"></div> -->
+      <!-- <div class="home-img-hover"></div> -->
     </section>
-
+  
     <!-- Section Skills  -->
-    <section class="about" id="skills">
+    <section class="skills" id="skills">
       <div class="col-center header-title">
         <hr class="head-line" />
         <h2 class="head" data-section="skills" data-value="title">My <span>Skills</span></h2>
         <hr class="head-line" />
       </div>
-
+  
       <div class="skill-content row-start">
         <div class="skill-div">
-          <h3 data-section="skills" data-value="hard">Technical Skills</h3>
-          <div class="row-wrap row-start">
+          <!-- <h3 data-section="skills" data-value="hard">Technical Skills</h3> -->
+          <div class="row-wrap row-center">
             <article class="card-skill col">
-              <h4 class="skill-title" >Front-End</h4>
+              <h4 class="skill-title">Front-End</h4>
               <small class="skill-years-title" data-section="skills" data-value="years">Experiencia en años</small>
               <div class="row skill-title">
                 <div class="row-between skill-years">
@@ -194,8 +218,8 @@
                 <p><strong>Inglés</strong></p>
               </div>
               <div class="rating">
-              <p data-section="language" data-value="read">
-                Cómo lo leo</p>
+                <p data-section="language" data-value="read">
+                  Cómo lo leo</p>
                 <div class="rating-4">
                   <input type="radio" class="star">
                   <input type="radio" class="star">
@@ -239,35 +263,39 @@
               </div>
             </article>
   
+            <article class="card-skill col">
+              <div class="col-center">
+                <h4 class="skill-title" data-section="skills" data-value="soft">Soft Skills</h4>
+                <h2>
+                 Fullstack
+                </h2>
+              </div>
+              <!-- <small class="skill-years-title" data-section="skills" data-value="years">Experiencia en años</small> -->
+              <ul class="soft-skill col-start" data-section="skills" data-value="list">
+                <li>Active listening</li>
+                <li>Patience</li>
+                <li>Open-mindedness</li>
+                <li>Adaptability</li>
+                <li>Problem-solving</li>
+                <li>Critical thinking</li>
+                <li>Creativity</li>
+                <li>Accountability</li>
+                <li>Confidence</li>
+                <li>Time and project management</li>
+              </ul>
+            </article>
           </div>
         </div>
-
-      <div class="skill-div">
-        <h3 data-section="skills" data-value="soft">Soft Skills</h3>
-        <div class="row-wrap row-center">
-          <article class="card-skill col">
-            <h4 class="skill-title" >Full Stack</h4>
-            <!-- <small class="skill-years-title" data-section="skills" data-value="years">Experiencia en años</small> -->
-            <ul class="soft-skill col-start" 
-            data-section="skills" data-value="list">
-              <li>Active listening</li>
-              <li>Patience</li>
-              <li>Open-mindedness</li>
-              <li>Adaptability</li>
-              <li>Problem-solving</li>
-              <li>Critical thinking</li>
-              <li>Creativity</li>
-              <li>Accountability</li>
-              <li>Confidence</li>
-              <li>Time and project management</li>
-            </ul>  
-          </article>
-
-        </div>
-      </div>
+  
+        <!-- <div class="skill-div">
+          <h3 data-section="skills" data-value="soft">Soft Skills</h3>
+          <div class="row-wrap row-center">
+  
+          </div>
+        </div> -->
       </div>
     </section>
-
+  
     <!-- Section education  -->
     <section class="education" id="education">
       <div class="col-center">
@@ -277,260 +305,260 @@
         </h2>
         <hr class="head-line" />
       </div>
-
-     
-        <!-- <img
-          src="assets/img/mapa-education.png"
-          class="education-bg-img"
-          
-        /> -->
-        <div class="education-content col">
-          <div class="col-center">
-            <h3 data-section="education" data-value="title-edu">Education</h3>
-            <h2 data-section="education" data-value="subtitle">Mi tesoro: el conocimiento</h2>
-          </div>
-
-          <div class="row-wrap row-evenly edu-sub-container">
-            <div class="col-start edu">
-              <h2 class="education-sub">Formal</h2>
-              <div class="education-box col">
-                <article class="col education-artcile">
-                  <header class="header-article">
-                      <h5>2020 - UNSE</h5>
-                      <h5>Analista en Sistemas de Información</h5>
-                    </header>
-                    <div class="msg-bubble">
-                      <h2>2020</h2>
-                      <h2>Analista en Sistemas de Información</h2>
-                      <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore, similique, nihil pariatur quisquam architecto alias
-                      modi, quasi ratione debitis animi necessitatibus consequatur
-                      iure quo velit tenetur! Molestias sapiente modi possimus.
-                    </p>
-                    </div>
-                </article>
-                <article class="col education-artcile">
-                  <header class="header-article">
-                    <h5>2016 - UNSE</h5>
-                    <h5>Programador Universitario</h5>
-                  </header>
-                  <div class="msg-bubble">
-                    <h2>2016</h2>
-                    <h2>Programador Universitario</h2>
-                    <p>
+  
+  
+      <!-- <img
+            src="assets/img/mapa-education.png"
+            class="education-bg-img"
+            
+          /> -->
+      <div class="education-content col">
+        <div class="col-center">
+          <h3 data-section="education" data-value="title-edu">Education</h3>
+          <h2 data-section="education" data-value="subtitle">Mi tesoro: el conocimiento</h2>
+        </div>
+  
+        <div class="row-wrap row-evenly edu-sub-container">
+          <div class="col-start edu">
+            <h2 class="education-sub">Formal</h2>
+            <div class="education-box col">
+              <article class="col education-artcile">
+                <header class="header-article">
+                  <h5>2020 - UNSE</h5>
+                  <h5>Analista en Sistemas de Información</h5>
+                </header>
+                <div class="msg-bubble">
+                  <h2>2020</h2>
+                  <h2>Analista en Sistemas de Información</h2>
+                  <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolore, similique, nihil pariatur quisquam architecto alias
                     modi, quasi ratione debitis animi necessitatibus consequatur
                     iure quo velit tenetur! Molestias sapiente modi possimus.
-                  </div>
-                </article>
-              </div>
+                  </p>
+                </div>
+              </article>
+              <article class="col education-artcile">
+                <header class="header-article">
+                  <h5>2016 - UNSE</h5>
+                  <h5>Programador Universitario</h5>
+                </header>
+                <div class="msg-bubble">
+                  <h2>2016</h2>
+                  <h2>Programador Universitario</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore, similique, nihil pariatur quisquam architecto alias
+                    modi, quasi ratione debitis animi necessitatibus consequatur
+                    iure quo velit tenetur! Molestias sapiente modi possimus.
+                </div>
+              </article>
             </div>
-            <div class="col-start edu">
-              <h2 class="education-sub">Capacitación</h2>
-              <div class="education-box col">
-                <article class="col education-artcile">
-                  <header class="header-article">
-                    <h5>2023 - Open Bootcamp</h5>
-                    <h5>Front-End Route</h5>
-                  </header>
-                  <div class="msg-bubble">
-                    <h2>2023 - Open Bootcamp</h2>
-                    <h2>Front-End Route</h2>
-                    <p >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore, similique, nihil pariatur quisquam architecto alias
-                      modi, quasi ratione debitis animi necessitatibus consequatur
-                      iure quo velit tenetur! Molestias sapiente modi possimus.
-                    </p>
-                  </div>
-                </article>
-                <article class="col education-artcile">
-                  <header class="header-article">
-                    <h5>2023 - Open Bootcamp</h5>
-                    <h5>Back-End Route</h5>
-                  </header>
-                  <div class="msg-bubble">
-                    <h2>2023 - Open Bootcamp</h2>
-                    <h2>Back-End Route</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore, similique, nihil pariatur quisquam architecto alias
-                      modi, quasi ratione debitis animi necessitatibus consequatur
-                      iure quo velit tenetur! Molestias sapiente modi possimus.
-                    </p>
-                  </div>
-                </article>
-              </div>
+          </div>
+          <div class="col-start edu">
+            <h2 class="education-sub">Capacitación</h2>
+            <div class="education-box col">
+              <article class="col education-artcile">
+                <header class="header-article">
+                  <h5>2023 - Open Bootcamp</h5>
+                  <h5>Front-End Route</h5>
+                </header>
+                <div class="msg-bubble">
+                  <h2>2023 - Open Bootcamp</h2>
+                  <h2>Front-End Route</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore, similique, nihil pariatur quisquam architecto alias
+                    modi, quasi ratione debitis animi necessitatibus consequatur
+                    iure quo velit tenetur! Molestias sapiente modi possimus.
+                  </p>
+                </div>
+              </article>
+              <article class="col education-artcile">
+                <header class="header-article">
+                  <h5>2023 - Open Bootcamp</h5>
+                  <h5>Back-End Route</h5>
+                </header>
+                <div class="msg-bubble">
+                  <h2>2023 - Open Bootcamp</h2>
+                  <h2>Back-End Route</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore, similique, nihil pariatur quisquam architecto alias
+                    modi, quasi ratione debitis animi necessitatibus consequatur
+                    iure quo velit tenetur! Molestias sapiente modi possimus.
+                  </p>
+                </div>
+              </article>
             </div>
-            <div class="col-start edu">
-              <h2 class="education-sub">Experiencia</h2>
-              <div class="education-box col">
-                <article class="col education-artcile">
-                  <header class="header-article">
-                    <h5>2020 - Poder Judicial</h5>
-                    <h5>Area de redes</h5>
-                  </header>
-                  <div class="msg-bubble">
-                    <h2>2020 - Poder Judicial</h2>
-                    <h2>Area de redes</h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore, similique, nihil pariatur quisquam architecto alias
-                      modi, quasi ratione debitis animi necessitatibus consequatur
-                      iure quo velit tenetur! Molestias sapiente modi possimus.
-                    </p>
-                  </div>
-                </article>
-
-                <article class="col education-artcile">
-                  <header class="header-article">
-                    <h5>2018 - Modularsoft</h5>
-                    <h5>Soporte tecnico y fix issues</h5>
-                  </header>
-                  <div class="msg-bubble">
-                    <h2>2016 - Modularsoft</h2>
-                    <h2>Soporte tecnico y fix issues</h2>
-                    <p >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore, similique, nihil pariatur quisquam architecto alias
-                      modi, quasi ratione debitis animi necessitatibus consequatur
-                      iure quo velit tenetur! Molestias sapiente modi possimus.
-                    </p>
-                  </div>
-                </article>
-
-                <article class="col education-artcile">
-                  <header class="header-article">
-                    <h5>2016 - Modularsoft</h5>
-                    <h5>Soporte tecnico y test UI</h5>
-                  </header>
-                  <div class="msg-bubble">
-                    <h2>2016 - Modularsoft</h2>
-                    <h2>Soporte tecnico y test UI</h2>
-                    <p >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore, similique, nihil pariatur quisquam architecto alias
-                      modi, quasi ratione debitis animi necessitatibus consequatur
-                      iure quo velit tenetur! Molestias sapiente modi possimus.
-                    </p>
-                  </div>
-                </article>
-                
-              </div>
+          </div>
+          <div class="col-start edu">
+            <h2 class="education-sub">Experiencia</h2>
+            <div class="education-box col">
+              <article class="col education-artcile">
+                <header class="header-article">
+                  <h5>2020 - Poder Judicial</h5>
+                  <h5>Area de redes</h5>
+                </header>
+                <div class="msg-bubble">
+                  <h2>2020 - Poder Judicial</h2>
+                  <h2>Area de redes</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore, similique, nihil pariatur quisquam architecto alias
+                    modi, quasi ratione debitis animi necessitatibus consequatur
+                    iure quo velit tenetur! Molestias sapiente modi possimus.
+                  </p>
+                </div>
+              </article>
+  
+              <article class="col education-artcile">
+                <header class="header-article">
+                  <h5>2018 - Modularsoft</h5>
+                  <h5>Soporte tecnico y fix issues</h5>
+                </header>
+                <div class="msg-bubble">
+                  <h2>2016 - Modularsoft</h2>
+                  <h2>Soporte tecnico y fix issues</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore, similique, nihil pariatur quisquam architecto alias
+                    modi, quasi ratione debitis animi necessitatibus consequatur
+                    iure quo velit tenetur! Molestias sapiente modi possimus.
+                  </p>
+                </div>
+              </article>
+  
+              <article class="col education-artcile">
+                <header class="header-article">
+                  <h5>2016 - Modularsoft</h5>
+                  <h5>Soporte tecnico y test UI</h5>
+                </header>
+                <div class="msg-bubble">
+                  <h2>2016 - Modularsoft</h2>
+                  <h2>Soporte tecnico y test UI</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolore, similique, nihil pariatur quisquam architecto alias
+                    modi, quasi ratione debitis animi necessitatibus consequatur
+                    iure quo velit tenetur! Molestias sapiente modi possimus.
+                  </p>
+                </div>
+              </article>
+  
             </div>
           </div>
         </div>
-      
+      </div>
+  
     </section>
-
- <!-- Section Projects  -->
- <section class="about col-center" id="projects">
-  <div class="col-center">
-    <hr class="head-line" />
-    <h2 class="head" data-section="projects" data-value="title-sec">
-      My <span>Projects</span>
-    </h2>
-    <hr class="head-line" />
-  </div>
-
-  <div class="">
-    <!-- <h3>Desarrollador Frontend y Backend</h3> -->
-    <div class="row-wrap row-center">
-      <figure class="project-figure">
-        <h2>Curriculum</h2>
-        <div class="project-img">
-          <img src="assets/img/project-curriculum.jpg"  />
-        </div>
-        <figcaption>
-            <div class="project-link">
+  
+    <!-- Section Projects  -->
+    <section class="about col-center" id="projects">
+      <div class="col-center">
+        <hr class="head-line" />
+        <h2 class="head" data-section="projects" data-value="title-sec">
+          My <span>Projects</span>
+        </h2>
+        <hr class="head-line" />
+      </div>
+  
+      <div class="">
+        <!-- <h3>Desarrollador Frontend y Backend</h3> -->
+        <div class="row-wrap row-center">
+          <figure class="project-figure">
+            <h2>Curriculum</h2>
+            <div class="project-img">
+              <img src="assets/img/project-curriculum.jpg" />
+            </div>
+            <figcaption>
+              <div class="project-link">
                 <a href="https://github.com/monomana" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="#"><i class="bx bx-link"></i></a>
-                </div>
-        </figcaption>
-      </figure>
-      <figure class="project-figure">
-        <h2>Portfolio</h2>
-        <div class="project-img">
-          <img src="assets/img/project-portfolio.jpg"  />
-        </div>
-        <figcaption>
-            <div class="project-link">
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <h2>Portfolio</h2>
+            <div class="project-img">
+              <img src="assets/img/project-portfolio.jpg" />
+            </div>
+            <figcaption>
+              <div class="project-link">
                 <a href="https://github.com/monomana" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="#"><i class="bx bx-link"></i></a>
-                </div>
-        </figcaption>
-      </figure>
-      <figure class="project-figure">
-        <h2>Coteminas</h2>
-        <img src="assets/img/project-coteminas.jpg"  />
-        <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
-        <figcaption>
-            <div class="project-link">
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <h2>Coteminas</h2>
+            <img src="assets/img/project-coteminas.jpg" />
+            <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
+            <figcaption>
+              <div class="project-link">
                 <a href="https://github.com/monomana/coteminas-pps" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="https://coteminas-test.web.app/" target="_blank">
                   <i class='bx bx-link'></i></a>
-                </div>
-        </figcaption>
-      </figure>
-      <figure class="project-figure">
-        <h2>Trivial-ODS Front-end</h2>
-        <img src="assets/img/project-trivial.jpg"  />
-        <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
-        <figcaption>
-            <div class="project-link">
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <h2>Trivial-ODS Front-end</h2>
+            <img src="assets/img/project-trivial.jpg" />
+            <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
+            <figcaption>
+              <div class="project-link">
                 <a href="https://github.com/monomana" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="https://trivialods.com/" target="_blank">
                   <i class='bx bx-link'></i>
                 </a>
               </div>
-        </figcaption>
-      </figure>
-      <figure class="project-figure">
-        <h2>Trivial-ODS Back-end</h2>
-        <img src="assets/img/project-trivial-crud.jpg"  />
-        <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
-        <figcaption>
-            <div class="project-link">
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <h2>Trivial-ODS Back-end</h2>
+            <img src="assets/img/project-trivial-crud.jpg" />
+            <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
+            <figcaption>
+              <div class="project-link">
                 <a href="https://github.com/monomana" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="https://quizzapp-crud.web.app/" target="_blank">
                   <i class='bx bx-link'></i>
                 </a>
-                </div>
-        </figcaption>
-      </figure>
-      <figure class="project-figure">
-        <h2>Ranti Back-end</h2>
-        <img src="assets/img/project-ranti.jpg"  />
-        <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
-        <figcaption>
-            <div class="project-link">
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <h2>Ranti Back-end</h2>
+            <img src="assets/img/project-ranti.jpg" />
+            <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
+            <figcaption>
+              <div class="project-link">
                 <a href="https://github.com/monomana" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="" target="_blank">
                   <i class='bx bx-link'></i>
                 </a>
-                </div>
-        </figcaption>
-      </figure>
-      <figure class="project-figure">
-        <h2>Encuesta</h2>
-        <img src="assets/img/project-encuesta.jpg"  />
-        <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
-        <figcaption>
-            <div class="project-link">
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="project-figure">
+            <h2>Encuesta</h2>
+            <img src="assets/img/project-encuesta.jpg" />
+            <!-- <img class="project-pic" src="assets/img/trivial-ods-pic.png" > -->
+            <figcaption>
+              <div class="project-link">
                 <a href="https://github.com/monomana" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="" target="_blank">
                   <i class='bx bx-link'></i>
                 </a>
-                </div>
-        </figcaption>
-      </figure>
-    </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
   
-  </div>
-</section>
-
+      </div>
+    </section>
+  
     <!-- Section about  -->
     <section class="about" id="about">
       <div class="col-center">
@@ -540,38 +568,45 @@
         </h2>
         <hr class="head-line" />
       </div>
-<div class="about-main-content ">
-  <div class="about-img">
-    <img src="assets/img/about.png"  />
-    <span class="circle-spin"></span>
-  </div>
-
-  <div class="about-content">
-    <h3 data-section="about" data-value="about-content">
-      Desarrollador Frontend y Backend
-    </h3>
-    <p data-section="about" data-value="detail">
-     Tengo la suerte de que mis padres me inculcaran el valor de la 
-     <b>responsabilidad, dedicacion, principios y valores morales</b> 
-     que hoy en dia son tan dificles de encontrar. 
-     <br>Constantemente siento la <b>necesidad de estar aprendiendo</b>, 
-     a lo que le llamo <b> <i>"sed de conocmiento"</i></b>.
-     Pienso que casi nada es imposible, solo es cuestion de tiempo y esfuerzo para 
-     encontrar soluciones a los problemas que se nos presentan.
-     <br>Gracias a los estudios universitarios aprendi algunas
-     cuetiones que no tenia en cuenta
-     sobre como debo comportarme <b>eticamente</b> en mi profesion.
-    </p>
-    <div class="btn-box btns">
-      <a href="" class="btn" data-section="about" data-value="read-more">
-        Read More</a>
-    </div>
-  </div>
-</div>
-    </section>
   
-    <footer class="footer">
-     <div class="footer-content row-center row-wrap">
+      
+      <div class="about-main-content">
+       <div class="about-img ">
+          <img src="assets/img/about.png" />
+          <span class="circle-spin"></span>
+        </div>
+  
+  
+        <div class="about-content">
+          <h3 data-section="about" data-value="about-content">
+            Desarrollador Frontend y Backend
+          </h3>
+          <div>
+            <p data-section="about" data-value="detail">
+              Tengo la suerte de que mis padres me inculcaran el valor de la
+              <b>responsabilidad, dedicacion, principios y valores morales</b>
+              que hoy en dia son tan dificles de encontrar.
+              <br>Constantemente siento la <b>necesidad de estar aprendiendo</b>,
+              a lo que le llamo <b> <i>"sed de conocmiento"</i></b>.
+              Pienso que casi nada es imposible, solo es cuestion de tiempo y esfuerzo para
+              encontrar soluciones a los problemas que se nos presentan.
+              <br>Gracias a los estudios universitarios aprendi algunas
+              cuetiones que no tenia en cuenta
+              sobre como debo comportarme <b>eticamente</b> en mi profesion.
+            </p>
+          </div>
+         
+          <div class="btn-box btns">
+            <a href="" class="btn" data-section="about" data-value="read-more">
+              Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content row-center row-wrap">
       <div class="footer-resources col-start">
         <h5>Recursos</h5>
         <ul>
@@ -595,32 +630,33 @@
           </li>
         </ul>
       </div>
-       <div class="footer-social">
-         <a href="#"><i class="bx bxl-github"></i></a>
-         <a href="#"><i class="bx bxl-linkedin-square"></i></a>
-         <a href="#"><i class="bx bxl-facebook-circle"></i></a>
-       </div>
-       <div class="col-start footer-rigth">
+      <div class="footer-social">
+        <a href="#"><i class="bx bxl-github"></i></a>
+        <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+      </div>
+      <div class="col-start footer-rigth">
         <div class="version row-center">
           <span>version 1.0</span><span>static</span>
         </div>
-         <small>Javascript - HTML - CSS</small>
-         <span>© <span id="current_date"></span> 2023 Mauricio JAT. </span>
-         <span>Licencia: <a href="https://opensource.org/licenses/MIT" target="_blank"> MIT</a></span>
-       </div>
+        <small>Javascript - HTML - CSS</small>
+        <span>© <span id="current_date"></span> 2023 Mauricio JAT. </span>
+        <span>Licencia: <a href="https://opensource.org/licenses/MIT" target="_blank"> MIT</a></span>
+      </div>
 
 
-       <!-- <nav class="navbar-footer col-start elevate">
+      <!-- <nav class="navbar-footer col-start elevate">
         <a href="#home" class="active" data-section="menu" data-value="home">Home</a>
         <a href="#skills" data-section="menu" data-value="skills">Skills</a>
         <a href="#education" data-section="menu" data-value="education">Education</a>
         <a href="#projects" data-section="menu" data-value="projects">Projects</a>
         <a href="#about" data-section="menu" data-value="about">About</a>
       </nav> -->
-     </div>
-      
-  
-    </footer>
-  </body>
-  <script src="js/index.js"></script>
+    </div>
+
+
+  </footer>
+</body>
+<script src="js/index.js"></script>
+
 </html>

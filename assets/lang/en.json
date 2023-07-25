@@ -7,10 +7,10 @@
     "about": "About"
   },
   "home": {
-    "hi":"Hi, I am <span> Mauricio Agüero",
+    "hi":"Hi, I am <br> <span> Mauricio Agüero",
     "hi-span":"Mauricio Agüero",
-    "title-dev": "Developer Full Stack",
-    "detail": "If there are something what I dont know, investigate to get learn and resolve <br>I always try to be up to date with the new technologies. <br>I try to always be updated by learning new technologies.<br >Although the knowledge acquired is never enough",
+    "title-dev": "Fullstack Developer",
+    "detail": "If there are something what I dont know, investigate to get learn and resolve <br>I always try to be up to date with the new technologies. <br>I try to always be updated by learning new technologies.<br >Although the knowledge acquired is never enough.",
     "hire-me": "Hire me",
     "talk": "Let's talk"
   },
@@ -34,8 +34,8 @@
   },
   "about": {
     "title-sec": "About <span>Me</span>",
-    "about-content": "Developer Frontend y Backend",
-    "detail": "I am lucky that my parents instilled in me the value of <b>responsibility, dedication, principles and moral values</b> that are so difficult to find today. <br>I constantly feel the <b>need to be learning</b>, which I call <b> <i>thirst for knowledge</i></b>. I think that almost nothing is impossible, it's just It is a matter of time and effort to find solutions to the problems that arise.<br>Thanks to my university studies, I learned some issues that I did not take into account about how I should behave <b>ethically</b> in my profession.",
+    "about-content": "Fullstack Developer",
+    "detail": "I am lucky that my parents instilled in me the value of <b>responsibility, dedication, principles and moral values</b> that are so difficult to find today. <br>I constantly feel the <b>need to be learning</b>, which I call <b> <q>thirst for knowledge</q></b>. I think that almost nothing is impossible, it's just It is a matter of time and effort to find solutions to the problems that arise.<br>Thanks to my university studies, I learned some issues that I did not take into account about how I should behave <b>ethically</b> in my profession.",
     "read-more":"Read More"
    },
    "language":{
