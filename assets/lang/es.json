@@ -9,11 +9,11 @@
   "home": {
     "hi":"Hola, soy <br><span >Mauricio Agüero</span>",
     "title-dev": "Desarrollador Fullstack",
-    "detail": "Si hay algo de lo que no tenga conocimiento, investigo hasta lograr aprender y resolverlo. <br>Trato de estar actualizado aprendiendo tecnologías nuevas.<br >Aunque nunca es suficiente el conocimiento adquirido",
+    "detail": "Si hay algo de lo que no tenga conocimiento, <b>investigo</b> hasta lograr aprender y resolverlo. <br>Trato de estar actualizado <b>aprendiendo</b> tecnologías nuevas.<br >Aunque nunca es suficiente el conocimiento adquirido.",
     "detail-br1":"Trato de estar siempre actualizado aprendiendo tecnologías nuevas.",
     "detail-br2":"Aunque nunca es suficiente el conocimiento adquirido.",
-    "hire-me": "Contrátame",
-    "talk": "Hablemos"
+    "hire-me": "Contáctame",
+    "talk": "Descargar CV"
   },
   "skills": {
     "title":"Mis <span>Habilidades</span>",

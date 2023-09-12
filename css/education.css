@@ -44,15 +44,15 @@
     align-self: start;
   }
   .education-content h3 {
-    font-size: 3.5rem;
+    font-size: var(--font-size-xl);
   }
   .education-content p {
-    font-size: 1.5rem;
+    font-size: var(--font-size-md);
     margin: 2rem 0 3rem;
   }
   
   .education-sub {
-    font-size: 2rem;
+    font-size: var(--font-size-md);
     text-align: start;
   }
 
@@ -86,7 +86,7 @@
     border: solid 1px var(--text-color-secundary);
     background-color: var(--main-color);
     position: relative;
-    left: -1.9rem;
+    left: -1.6rem;
 }
 
 .education-box::after {
@@ -95,7 +95,7 @@
     /* border: dashed .3em var(--bg-color-secundary); */
     position: absolute;
     padding-left: 0.5rem;
-    font-size: 1.3rem;
+    font-size: var(--font-size-base);
 }
 
 .education-box article::before {
@@ -106,12 +106,12 @@
     width: 15px;
     background-color: var(--text-color-secundary);
     position: relative;
-    left: -1.9rem;
+    left: -1.6rem;
     top: 3rem;
 }
 
 .header-article{
-  font-size: 1.5rem;
+  font-size: var(--font-size-base);
   /* border-top: solid 2px var(--bg-color-secundary); */
   /* overflow-wrap: break-word; */
   /* flex-shrink: 1; */
@@ -127,7 +127,7 @@ html.dark .education-box article::before{
 .msg-bubble{
     display: none;
 }
-.education-artcile:hover .msg-bubble::before {
+.education-artcile1:hover .msg-bubble::before {
     content: "";
 
     width: 0px;
@@ -157,7 +157,7 @@ html.dark .education-box article::before{
     border-bottom: 10px solid transparent;
     left: -17px;
   } */
-.education-artcile:hover .msg-bubble {
+.education-artcile1:hover .msg-bubble {
     padding: 0.8rem;
     /* margin-left: 5rem; */
     position: absolute;
@@ -185,11 +185,11 @@ html.dark .education-artcile:hover .msg-bubble {
     background-color: var(--text-color-secundary);
     /* border-color: solid 3rem red; */
     position: relative;
-    left: -2.2rem;
+    left: -2rem;
     top: 3rem;
 }
 
-.education-artcile:hover header {
+.education-artcile1:hover header {
     content: "";
     visibility: hidden;
 }

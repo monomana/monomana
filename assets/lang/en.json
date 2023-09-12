@@ -7,12 +7,12 @@
     "about": "About"
   },
   "home": {
-    "hi":"Hi, I am <br> <span> Mauricio Agüero",
+    "hi":"Hi, I am <br> <span> Mauricio Agüero </span>",
     "hi-span":"Mauricio Agüero",
     "title-dev": "Fullstack Developer",
-    "detail": "If there are something what I dont know, investigate to get learn and resolve <br>I always try to be up to date with the new technologies. <br>I try to always be updated by learning new technologies.<br >Although the knowledge acquired is never enough.",
-    "hire-me": "Hire me",
-    "talk": "Let's talk"
+    "detail": "If there are something what I dont know, <b>investigate</b> to get learn and resolve. <br>I try to always be updated by <b>learning</b> new technologies.<br >Although the knowledge acquired is never enough.",
+    "hire-me": "Contact me",
+    "talk": "Download Resume"
   },
   "skills": {
     "title":"My <span>Skills</span>",

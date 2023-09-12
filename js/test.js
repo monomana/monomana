@@ -40,3 +40,32 @@ function createObject(name, subs) {
   }
 
   console.log(createObject(name,subs).getStatus())
+
+  function getKeysOfBooleanValues(obj) {
+    // tu código aquí
+    const entries = Object.entries(obj);
+    const resultArray = []
+    entries.forEach((entrie) => {
+      if(typeof(entrie[1]) === 'boolean'){
+        resultArray.push(entrie[0]);
+      }
+    })
+  return resultArray;
+  }
+
+  console.log(
+
+    getKeysOfBooleanValues({ a: true, b: 42, c: false })
+  );
+
+
+  function searchInOcean(ocean, section, item) {
+    // tu código aquí
+  console.log(ocean[section]?.[item]);
+  return ocean[section]?.[item] ? true : false;
+  }
+
+  console.log(
+
+    searchInOcean({ deep: { treasure: "oro" }},"deep","treasure")
+  );
