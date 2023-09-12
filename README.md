@@ -1,4 +1,3 @@
-# portfolio
 <h1 align="center">Hi 👋, I'm Mauricio Agüero Trotta</h1>
 <h3 align="center">A passionate frontend and Backend developer from Argentina</h3>
 
