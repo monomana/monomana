@@ -58,6 +58,8 @@ html.dark .project-figure:hover {
     position: relative;
    bottom: 4rem;
    left: 4rem;
+   display: flex;
+   width: 15rem;
 }
 /* .project-pic {
     position:absolute;
@@ -67,6 +69,25 @@ html.dark .project-figure:hover {
     top: 2rem;
 } */
 
+.project-figure-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-tech {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+ position: relative; 
+
+  /* bottom: 4rem; */
+ width: 170px;
+}
+
+.project-tech i {
+  width: 30px;
+  height: 30px;
+}
 
 
 .project-link {
